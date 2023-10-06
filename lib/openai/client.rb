@@ -49,6 +49,10 @@ module OpenAI
       @finetunes ||= OpenAI::Finetunes.new(client: self)
     end
 
+    def fine_tuning_jobs
+      @fine_tuning_jobs ||= OpenAI::FineTuningJobs.new(client: self)
+    end
+
     def images
       @images ||= OpenAI::Images.new(client: self)
     end
